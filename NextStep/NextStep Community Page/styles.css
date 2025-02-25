@@ -1,0 +1,133 @@
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Custom Color Palette */
+  :root {
+    --primary-color: #5589C6; /* Blue */
+    --secondary-color: #000000; /* Black */
+    --accent-color: #FFFFFF; /* White */
+    --highlight-color: #BE8A60; /* Beige */
+    --neutral-color: #4B6858; /* Dark Greenish */
+    --dark-background: #1a1a1a;
+    --dark-text: #e6e6e6;
+    --green-color: #4CAF50; /* Green */
+    --red-color: #F44336; /* Red */
+    --blue-color: #2196F3; /* Blue */
+  }
+  
+  .bg-career-pattern {
+    background-image: url("webpage bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  /* Override Tailwind default colors */
+  .bg-primary {
+    background-color: var(--primary-color);
+  }
+  .bg-secondary {
+    background-color: var(--secondary-color);
+  }
+  .bg-accent {
+    background-color: var(--accent-color);
+  }
+  .bg-highlight {
+    background-color: var(--highlight-color);
+  }
+  .bg-neutral {
+    background-color: var(--neutral-color);
+  }
+  .text-primary {
+    color: var(--primary-color);
+  }
+  .text-secondary {
+    color: var(--secondary-color);
+  }
+  .text-accent {
+    color: var(--accent-color);
+  }
+  .text-highlight {
+    color: var(--highlight-color);
+  }
+  .text-neutral {
+    color: var(--neutral-color);
+  }
+  
+  /* Dark mode styles */
+  .dark-mode {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+  }
+  .dark-mode .bg-primary {
+    background-color: #333;
+  }
+  .dark-mode .bg-accent {
+    background-color: #444;
+  }
+  .dark-mode .bg-highlight {
+    background-color: #666;
+  }
+  .dark-mode .bg-neutral {
+    background-color: #555;
+  }
+  
+  /* Animations & Transitions */
+  /* Fade-in effect for the main container */
+  .fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Global transition for buttons and links */
+  a, button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  a:hover, button:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Hover effect for question cards (list items) */
+  li.bg-white {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  li.bg-white:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+  }
+  
+  /* Input focus effect */
+  input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primary-color);
+  }
+  
+  /* Additional Animations */
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .5; }
+  }
+  
+  /* Toast styles */
+  .toast {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    z-index: 50;
+  }
+  .toast-success { background-color: var(--green-color); }
+  .toast-error { background-color: var(--red-color); }
+  
+  /* Like/Dislike button styles */
+  .liked { background-color: var(--green-color) !important; }
+  .disliked { background-color: var(--red-color) !important; }
